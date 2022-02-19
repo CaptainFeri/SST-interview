@@ -6,7 +6,7 @@ import { TransactionDto } from './dto/transaction.dto';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
+  @Get('/check-tr-hash')
   getHello(@Query('tHash') tHash: string): string {
     const transaction = new TransactionDto();
     transaction.transactionHash = tHash;
